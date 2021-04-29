@@ -46,7 +46,7 @@ Mit diesem Befehl werden Informationen aus mehreren Tabellen gleichzeitig abgefr
 SELECT schueler.vorname, schueler.nachname, klassen.name FROM schueler
 JOIN klassen ON klasse.id = schueler.klassen_id
 ```
-Mit diesem Befehl wird abgefragt, welcher Schüler*in in welcher Klasse ist.
+Mit diesem Befehl wird abgefragt, welche Schüler*innen in welcher Klasse ist.
 
 #### Ergebnis:
 
@@ -100,7 +100,7 @@ SELECT schueler.vorname, schueler.nachname, lehrer.vorname, lehrer.nachname FROM
 JOIN klassen ON klasse.id = schueler.klassen_id
 JOIN lehrer ON lehrer.id = klassen.lehrer_id
 ```
-Mit diesem Befehl wird abgefragt, welcher Schüler*in welche Klassenlehrkraft hat. Die drei Tabellen (schueler, klassen, lehrer) werden mittels JOIN miteinander verbunden. Ausgegeben werden aber nur die Spalten (aus Tabelle schueler und Tabelle lehrer), die im SELECT-Befehl eingetragen wurden.
+Mit diesem Befehl wird abgefragt, welche Schüler*innen welche Klassenlehrkraft haben. Die drei Tabellen (schueler, klassen, lehrer) werden mittels JOIN miteinander verbunden. Ausgegeben werden aber nur die Spalten (aus Tabelle schueler und Tabelle lehrer), die im SELECT-Befehl eingetragen wurden.
 
 #### Ergebnis:
 

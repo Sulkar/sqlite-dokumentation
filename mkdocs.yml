@@ -3,7 +3,6 @@ repo_url: https://github.com/Sulkar/sqlite-dokumentation/
 theme:
     name: mkdocs
     custom_dir: custom_theme/
-    language: de
     highlightjs: true
     hljs_languages:
         - sql
@@ -11,6 +10,7 @@ extra_css: [extra.css]
 plugins:
     - search:
         min_search_length: 2
+        prebuild_index: python
 nav:
     - SELECT: 'select.md'
     - WHERE: 'where.md'
