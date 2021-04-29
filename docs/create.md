@@ -40,6 +40,8 @@ In SQLite gibt es keinen Datentyp für Datumswerte. Diese speichern wir als Text
 ### Beispiel 1:
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 CREATE TABLE "lehrer" (
     "id" INTEGER PRIMARY KEY, 
@@ -62,6 +64,7 @@ Die neu erstellte Tabelle hat noch keine Einträge, diese können mit dem INSERT
 ### Beispiel 2:
 
 #### Befehl
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 CREATE TABLE "klassen" (
     "id" INTEGER PRIMARY KEY, 

@@ -15,6 +15,8 @@ Dieser Befehl fügt einer Tabelle eine neue Spalte hinzu.
 |--|--------   | -------- | ------------ | :-------: |:-:|
 
 #### Befehl:
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 ALTER TABLE schueler ADD geburtsort TEXT
 ```
@@ -44,6 +46,8 @@ Dieser Befehl löscht eine Spalte einer Tabelle.
 
 
 #### Befehl:
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 ALTER TABLE schueler DROP COLUMN geburtsort 
 ```
@@ -74,6 +78,7 @@ Dieser Befehl benennt eine Spalte in der Tabelle um.
 
 #### Befehl:
 
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 ALTER TABLE schueler RENAME fehltage TO absenzen
 ```
@@ -86,6 +91,7 @@ Dieser Befehl benennt die Spalte fehltage der Tabelle schueler in absenzen um.
 
 ### Beispiel 2:
 
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 ALTER TABLE lehrer RENAME TO lehrkraefte
 ```

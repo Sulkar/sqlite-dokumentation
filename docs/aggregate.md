@@ -34,6 +34,8 @@ Mit diesem Befehl werden Informationen aus mehreren Tabellen gleichzeitig abgefr
 |5 | Ayse      | Ünül     | 2008-12-12   |     2     |
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT MAX(geburtsdatum), vorname FROM schueler
 ```
@@ -48,6 +50,8 @@ Mit diesem Befehl wird der jüngste Schüler*in gefunden, da nach dem größten 
 ---
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT MIN(geburtsdatum), vorname FROM schueler
 ```
@@ -61,6 +65,7 @@ Mit diesem Befehl wird der älteste Schüler*in gefunden, da nach dem kleinsten 
 
 #### Befehl
 
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT COUNT(id) FROM schueler
 ```
@@ -77,6 +82,7 @@ Mit diesem Befehl werden die Einträge in der Spalte id gezählt und ausgegeben.
 
 #### Befehl
 
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT COUNT(id), klasse_id FROM schueler GROUP BY klasse_id
 ```
@@ -103,6 +109,7 @@ Der Befehl HAVING ersetzt bei einer Aggregatsfunktion den Befehl WHERE und über
 
 #### Befehl
 
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT COUNT(id), klasse_id FROM schueler 
 GROUP BY klasse_id 

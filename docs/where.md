@@ -38,6 +38,8 @@ Mit diesem Befehl werden alle Einträge der Tabelle angezeigt, bei welchen das E
 
 `Wert`: 1
 
+
+<a class="runSqlVerineM1" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler WHERE klasse_id = 1
 ```
@@ -56,6 +58,7 @@ SELECT * FROM schueler WHERE klasse_id = 1
 
 `Wert`: 2008-06-30
 
+<a class="runSqlVerineM1" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler WHERE geburtsdatum <= '2008-06-30'
 ```
@@ -75,6 +78,7 @@ SELECT * FROM schueler WHERE geburtsdatum <= '2008-06-30'
 
 `Wert`: Ma%
 
+<a class="runSqlVerineM1" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler WHERE vorname LIKE 'Ma%'
 ```
@@ -94,6 +98,7 @@ SELECT * FROM schueler WHERE vorname LIKE 'Ma%'
 
 `Wert`: ('Müller', 'Ünül')
 
+<a class="runSqlVerineM1" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler WHERE nachname IN ('Müller', 'Ünül')
 ```
@@ -149,6 +154,7 @@ Mit diesem Befehl werden alle Einträge der Tabelle angezeigt, bei welchen das E
 
 `Wert2`: 'Ma%'
 
+<a class="runSqlVerineM1" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler WHERE klasse_id = 1 AND vorname LIKE 'Ma%'
 ```

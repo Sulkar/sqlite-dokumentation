@@ -21,6 +21,8 @@ Mit dem UPDATE Befehl können alle oder einzelne Einträge in einer Tabelle ver�
 |5 | Ayse      | Ünül     | 2008-12-12   |     2     |3|
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 UPDATE schueler SET fehltage = 0
 ```
@@ -61,6 +63,8 @@ Mit dem UPDATE Befehl können gezielt Einträge in der Datenbank verändert werd
 |5 | Ayse      | Ünül     | 2008-12-12   |     2     |3|
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 UPDATE schueler SET klasse_id = 3 WHERE klasse_id = 2
 ```

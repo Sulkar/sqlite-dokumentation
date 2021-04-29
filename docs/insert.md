@@ -22,6 +22,8 @@ Mit dem INSERT INTO Befehl wird eine neue Zeile einer Tabelle hinzugefügt. Nebe
 |5 | Ayse      | Ünül     | 2008-12-12   |     2     |3|
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 INSERT INTO tabellenname (vorname, nachname, geburtsdatum, klasse_id, fehltage) 
 VALUES ('Ullrich', 'Gcheuder', '2006-07-05', 3, 20)

@@ -9,6 +9,8 @@ Mit diesem Befehl wird das Ergebnis in aufsteigender (ASC) oder absteigender (DE
 ### Beispiele:
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler ORDER BY geburtsdatum ASC
 ```
@@ -24,6 +26,8 @@ SELECT * FROM schueler ORDER BY geburtsdatum ASC
 |1 | Paul      | Weber    | 2009-07-12   |     1     |
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler ORDER BY geburtsdatum DESC
 ```
@@ -52,6 +56,8 @@ Mit diesem Befehl wird nur die angegebene Anzahl von Ergebnissen angezeigt.
 ### Beispiele:
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler LIMIT 2
 ```
@@ -76,6 +82,8 @@ Mit diesem Befehl wird die angegebene Anzahl (LIMIT) der Ergebnisse ab dem angeg
 ### Beispiele:
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler LIMIT 2 OFFSET 2
 ```

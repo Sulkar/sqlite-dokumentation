@@ -11,6 +11,7 @@ Mit diesem Befehl werden alle Zeilen der Spalte "spaltenname" aus der Tabelle "t
 
 #### Befehl:
 
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT vorname FROM schueler
 ```
@@ -39,6 +40,8 @@ Hiermit können mehrere Spalten einer Tabelle angezeigt werden. Es werden immer 
 ### Beispiel
 
 #### Befehl:
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT id, vorname FROM schueler
 ```
@@ -68,6 +71,8 @@ Mit diesem Befehl werden alle Zeilen aller Spalten der Tabelle angezeigt.
 ### Beispiel
 
 #### Befehl:
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT * FROM schueler
 ```

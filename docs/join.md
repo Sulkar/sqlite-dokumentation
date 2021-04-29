@@ -38,6 +38,8 @@ Mit diesem Befehl werden Informationen aus mehreren Tabellen gleichzeitig abgefr
 
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT schueler.vorname, schueler.nachname, klassen.name FROM schueler
 JOIN klassen ON klasse.id = schueler.klassen_id
@@ -89,6 +91,8 @@ Mit diesem Befehl wird abgefragt, welcher Schüler*in in welcher Klasse ist.
 |7 | Werner   | Geuder     | 
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 SELECT schueler.vorname, schueler.nachname, lehrer.vorname, lehrer.nachname FROM schueler
 JOIN klassen ON klasse.id = schueler.klassen_id

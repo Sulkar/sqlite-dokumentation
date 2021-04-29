@@ -18,6 +18,8 @@ Dieser Befehl löscht alle Einträge einer Tabelle.
 |5 | Ayse      | Ünül     | 2008-12-12   |     2     |3|
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 DELETE FROM schueler
 ```
@@ -48,6 +50,8 @@ Dieser Befehl löscht alle Einträge einer Tabelle, die mit Hilfe von WHERE und 
 |5 | Ayse      | Ünül     | 2008-12-12   |     2     |3|
 
 #### Befehl
+
+<a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a>
 ```
 DELETE FROM schueler WHERE vorname LIKE 'Ma%'
 ```
