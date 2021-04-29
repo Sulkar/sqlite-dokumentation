@@ -12,12 +12,13 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
         <link href="../extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/sql.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -37,18 +38,14 @@
                             <li class="navitem active">
                                 <a href="./" class="nav-link">SELECT</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">WHERE <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../where/" class="dropdown-item">WHERE 1</a>
-</li>
-                                    
-<li>
-    <a href="../where2/" class="dropdown-item">WHERE 2</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../where/" class="nav-link">WHERE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../order/" class="nav-link">ORDER</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../limit/" class="nav-link">LIMIT</a>
                             </li>
                             <li class="navitem">
                                 <a href="../join/" class="nav-link">JOIN</a>
@@ -87,17 +84,17 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
+                                <i class="fa fa-search"></i> Suche
                             </a>
                         </li>
                             <li class="nav-item">
                                 <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
+                                    <i class="fa fa-arrow-left"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a rel="next" href="../where/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                     </ul>
@@ -275,6 +272,22 @@
 </tbody>
 </table></div>
             </div>
+            <div class="row text-center">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                        
+                            <p>
+                                <a rel="prev" class="nav-link disabled" style="display: inline-block;">
+                                    <i class="fa fa-arrow-left"></i> zurück
+                                </a>
+                            
+                            
+                                <a rel="next" href="../where/" class="nav-link" style="display: inline-block;">
+                                    weiter <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </p>
+                    </div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -292,17 +305,16 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <h4 class="modal-title" id="searchModalLabel">Suche</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
                 <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
+                    Hier kannst du die Dokumentation durchsuchen:
                 </p>
                 <form>
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Suche..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
