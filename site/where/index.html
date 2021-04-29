@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>WHERE 1 - SQLite Dokumentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">SQLite Dokumentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../select/" class="nav-link">SELECT</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">WHERE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">WHERE 1</a>
+</li>
+                                    
+<li>
+    <a href="../where2/" class="dropdown-item">WHERE 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../join/" class="nav-link">JOIN</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../aggregate/" class="nav-link">AGGREGATE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../update/" class="nav-link">UPDATE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../delete/" class="nav-link">DELETE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../insert/" class="nav-link">INSERT</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">TABLE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../create/" class="dropdown-item">CREATE</a>
+</li>
+                                    
+<li>
+    <a href="../drop/" class="dropdown-item">DROP</a>
+</li>
+                                    
+<li>
+    <a href="../alter/" class="dropdown-item">ALTER</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../select/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../where2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#where-1" class="nav-link">WHERE 1</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#vergleichsoperatoren" class="nav-link">Vergleichsoperatoren</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ausgabe-einfach-filtern" class="nav-link">Ausgabe einfach filtern</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#verknupfungsoperatoren" class="nav-link">Verknüpfungsoperatoren</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ausgabe-mehrfach-filtern" class="nav-link">Ausgabe mehrfach filtern</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="where-1">WHERE 1</h1>
+<h2 id="vergleichsoperatoren">Vergleichsoperatoren</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>gleich</td>
+<td>nachname = 'Weber'</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>ungleich</td>
+<td>id &lt;&gt; 2</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>größer gleich</td>
+<td>id &gt;= 2</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>kleiner gleich</td>
+<td>id &lt;= 3</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>kleiner</td>
+<td>id &lt; 3</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>größer</td>
+<td>id &gt; 2</td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>Wert innerhalb einer Spanne</td>
+<td>id BETWEEN 2 AND 4</td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>Beinhaltet einen Text; Platzhalter: %</td>
+<td>vorname LIKE 'Ma%'</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>ist Teil einer Auflistung</td>
+<td>vorname IN ('Paul', 'Margot')</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ausgabe-einfach-filtern">Ausgabe einfach filtern</h2>
+<pre><code>SELECT * FROM tabellenname WHERE spaltenname &lt;Operator&gt; &lt;Wert&gt;
+</code></pre>
+<p>Mit diesem Befehl werden alle Einträge der Tabelle angezeigt, bei welchen das Ergebnis der Bedingung wahr ist.</p>
+<h3 id="beispiele">Beispiele:</h3>
+<h4 id="befehl">Befehl</h4>
+<p><code>spaltenname</code> : klasse_id</p>
+<p><code>Operator</code>: =</p>
+<p><code>Wert</code>: 1</p>
+<pre><code>SELECT * FROM schueler WHERE klasse_id = 1
+</code></pre>
+<h4 id="ergebnis">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Paul</td>
+<td>Weber</td>
+<td>2009-07-12</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>2008-06-30</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="befehl_1">Befehl</h4>
+<p><code>spaltenname</code> : geburtsdatum</p>
+<p><code>Operator</code>: &lt;=</p>
+<p><code>Wert</code>: 2008-06-30</p>
+<pre><code>SELECT * FROM schueler WHERE geburtsdatum &lt;= '2008-06-30'
+</code></pre>
+<h4 id="ergebnis_1">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>2008-06-30</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sabrina</td>
+<td>Otto</td>
+<td>2007-05-19</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="befehl_2">Befehl</h4>
+<p><code>spaltenname</code> : vorname</p>
+<p><code>Operator</code>: LIKE</p>
+<p><code>Wert</code>: Ma%</p>
+<pre><code>SELECT * FROM schueler WHERE vorname LIKE 'Ma%'
+</code></pre>
+<h4 id="ergebnis_2">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Margot</td>
+<td>Müller</td>
+<td>2008-11-19</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>2008-06-30</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="befehl_3">Befehl</h4>
+<p><code>spaltenname</code> : nachname</p>
+<p><code>Operator</code>: IN</p>
+<p><code>Wert</code>: ('Müller', 'Ünül')</p>
+<pre><code>SELECT * FROM schueler WHERE nachname IN ('Müller', 'Ünül')
+</code></pre>
+<h4 id="ergebnis_3">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Margot</td>
+<td>Müller</td>
+<td>2008-11-19</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ayse</td>
+<td>Ünül</td>
+<td>2008-12-12</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="verknupfungsoperatoren">Verknüpfungsoperatoren</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td>verknüpft zwei Bedingungen mit UND</td>
+<td>nachname = 'Weber' AND klasse_id = '2'</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>verknüpft zwei Bedingungen mit  ODER</td>
+<td>nachname = 'Weber' OR nachname = 'Ünül'</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>invertiert das Ergebnis einer Bedingung</td>
+<td>NOT nachname = 'Weber'</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ausgabe-mehrfach-filtern">Ausgabe mehrfach filtern</h2>
+<pre><code>SELECT * FROM tabellenname 
+WHERE spaltenname_1 &lt;Vergleichsoperator_1&gt; &lt;Wert_1&gt;
+&lt;Verknüpfungsoperator&gt; spaltenname_2 &lt;Vergleichsperator_2&gt; &lt;Wert_2&gt; 
+</code></pre>
+<p>Mit diesem Befehl werden alle Einträge der Tabelle angezeigt, bei welchen das Ergebnis der verknüpften Bedingung wahr ist.</p>
+<h3 id="beispiele_1">Beispiele:</h3>
+<h4 id="befehl_4">Befehl</h4>
+<p><code>spaltenname1</code> : klasse_id</p>
+<p><code>Operator1</code>: =</p>
+<p><code>Wert1</code>: 1</p>
+<p><code>spaltenname2</code> : vorname</p>
+<p><code>Operator2</code>: LIKE</p>
+<p><code>Wert2</code>: 'Ma%'</p>
+<pre><code>SELECT * FROM schueler WHERE klasse_id = 1 AND vorname LIKE 'Ma%'
+</code></pre>
+<h4 id="ergebnis_4">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>2008-06-30</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
