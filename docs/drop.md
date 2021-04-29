@@ -1,5 +1,7 @@
 # TABLE: DROP 
 
+<center><img src="/images/Drop.png" width="200px"></center>
+
 ## Tabelle löschen
 ```
 DROP TABLE tabellenname

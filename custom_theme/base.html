@@ -122,29 +122,17 @@
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
+                                                        
                         {%- endif %}
                       {%- endblock %}
-
+                      
                       {%- block repo %}
-                        {%- if page and page.edit_url %}
-                            <li class="nav-item">
-                                <a href="{{ page.edit_url }}" class="nav-link">
-                                    {%- if config.repo_name == 'GitHub' -%}
-                                        <i class="fa fa-github"></i> Edit on {{ config.repo_name }}
-                                    {%- elif config.repo_name == 'Bitbucket' -%}
-                                        <i class="fa fa-bitbucket"></i> Edit on {{ config.repo_name }}
-                                    {%- elif config.repo_name == 'GitLab' -%}
-                                        <i class="fa fa-gitlab"></i> Edit on {{ config.repo_name }}
-                                    {%- else -%}
-                                    Edit on {{ config.repo_name }}
-                                    {%- endif -%}
-                                </a>
-                            </li>
-                        {%- elif config.repo_url %}
+                        
+                        {%- if config.repo_url %}
                             <li class="nav-item">
                                 <a href="{{ config.repo_url }}" class="nav-link">
                                     {%- if config.repo_name == 'GitHub' -%}
-                                        <i class="fa fa-github"></i> {{ config.repo_name }}
+                                        <i class="fa fa-github"></i> 
                                     {%- elif config.repo_name == 'Bitbucket' -%}
                                         <i class="fa fa-bitbucket"></i> {{ config.repo_name }}
                                     {%- elif config.repo_name == 'GitLab' -%}

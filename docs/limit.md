@@ -1,5 +1,7 @@
 # LIMIT
 
+<center><img src="/images/Limit.png" width="200px"></center>
+
 ## Ausgabe einschränken
 ```
 SELECT * FROM tabellenname LIMIT <Anzahl>
@@ -26,6 +28,7 @@ SELECT * FROM schueler LIMIT 2
 
 ---
 
+<center><img src="/images/Offset.png" width="200px"></center>
 
 ## Eine Anzahl von Ergebnissen überspringen
 ```

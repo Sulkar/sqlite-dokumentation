@@ -1,5 +1,7 @@
 # TABLE: CREATE
 
+<center><img src="/images/Create.png" width="200px"></center>
+
 ## eine neue Tabelle zur Datenbank hinzufügen
 
 ```

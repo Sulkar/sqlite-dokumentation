@@ -1,5 +1,7 @@
 # JOIN
 
+<center><img src="/images/Join.png" width="200px"></center>
+
 ## Ergebnisse aus mehreren Tabellen
 
 ```

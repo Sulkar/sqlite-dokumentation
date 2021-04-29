@@ -1,5 +1,7 @@
 # AGGREGATE
 
+<center><img src="/images/Aggregatfunktionen.png" width="200px"></center>
+
 ## Aggregatsfunktionen - GROUP BY ...
 
 

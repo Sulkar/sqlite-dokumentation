@@ -1,4 +1,7 @@
 # DELETE
+
+<center><img src="/images/Delete.png" width="200px"></center>
+
 ## alle Einträge einer Tabelle löschen
 ```
 DELETE FROM tabellenname

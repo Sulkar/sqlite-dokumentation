@@ -1,4 +1,5 @@
 site_name: SQLite Dokumentation
+repo_url: https://github.com/Sulkar/sqlite-dokumentation/
 theme:
     name: mkdocs
     custom_dir: custom_theme/

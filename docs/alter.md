@@ -1,5 +1,7 @@
 # TABLE: ALTER
 
+<center><img src="/images/neueSpalte.png" width="200px"></center>
+
 ## Spalte einer Tabelle hinzufügen
 
 ```
