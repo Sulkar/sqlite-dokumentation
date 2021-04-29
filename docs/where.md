@@ -1,4 +1,4 @@
-# WHERE
+# WHERE 1
 
 ## Vergleichsoperatoren
 
@@ -19,7 +19,7 @@
 ---
 
 
-## WHERE - Ausgabe einfach filtern
+## Ausgabe einfach filtern
 
 ```
 SELECT * FROM tabellenname WHERE spaltenname <Operator> <Wert>
@@ -33,7 +33,9 @@ Mit diesem Befehl werden alle Einträge der Tabelle angezeigt, bei welchen das E
 
 #### Befehl
 `spaltenname` : klasse_id
+
 `Operator`: =
+
 `Wert`: 1
 
 ```
@@ -49,7 +51,9 @@ SELECT * FROM schueler WHERE klasse_id = 1
 
 #### Befehl
 `spaltenname` : geburtsdatum
+
 `Operator`: <=
+
 `Wert`: 2008-06-30
 
 ```
@@ -66,7 +70,9 @@ SELECT * FROM schueler WHERE geburtsdatum <= '2008-06-30'
 
 #### Befehl
 `spaltenname` : vorname
+
 `Operator`: LIKE
+
 `Wert`: Ma%
 
 ```
@@ -83,7 +89,9 @@ SELECT * FROM schueler WHERE vorname LIKE 'Ma%'
 
 #### Befehl
 `spaltenname` : nachname
+
 `Operator`: IN
+
 `Wert`: ('Müller', 'Ünül')
 
 ```
@@ -114,7 +122,7 @@ SELECT * FROM schueler WHERE nachname IN ('Müller', 'Ünül')
 ---
 
 
-## WHERE - Ausgabe mehrfach filtern
+## Ausgabe mehrfach filtern
 
 ```
 SELECT * FROM tabellenname 
@@ -130,10 +138,15 @@ Mit diesem Befehl werden alle Einträge der Tabelle angezeigt, bei welchen das E
 
 #### Befehl
 `spaltenname1` : klasse_id
+
 `Operator1`: =
+
 `Wert1`: 1
+
 `spaltenname2` : vorname
+
 `Operator2`: LIKE
+
 `Wert2`: 'Ma%'
 
 ```
@@ -145,4 +158,3 @@ SELECT * FROM schueler WHERE klasse_id = 1 AND vorname LIKE 'Ma%'
 |--|--------   | -------- | ------------ | :-------: |
 |3 | Mahmud    | Al'hissi | 2008-06-30   |     1     |
 
----

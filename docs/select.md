@@ -1,5 +1,5 @@
 # SELECT
-## SELECT ... FROM - Einzelne Spalte ausgeben
+## Einzelne Spalte ausgeben
 
 ```sql
 SELECT spaltenname FROM tabellenname
@@ -7,9 +7,10 @@ SELECT spaltenname FROM tabellenname
 
 Mit diesem Befehl werden alle Zeilen der Spalte "spaltenname" aus der Tabelle "tabellenname" ausgegeben.
 
-### Beispiel:
+### Beispiel
 
-#### Befehl 
+#### Befehl:
+
 ```
 SELECT vorname FROM schueler
 ```
@@ -28,16 +29,16 @@ SELECT vorname FROM schueler
 
 ---
 
-## SELECT ... FROM - Gezielt mehrere Spalten ausgeben
+## Gezielt mehrere Spalten ausgeben
 
 ```
 SELECT spaltenname_1, spaltenname_2,...,spaltenname_n FROM tabellenname
 ```
 Hiermit können mehrere Spalten einer Tabelle angezeigt werden. Es werden immer alle Zeilen der selektierten Spalten angezeigt.
 
-### Beispiel:
+### Beispiel
 
-#### Befehl
+#### Befehl:
 ```
 SELECT id, vorname FROM schueler
 ```
@@ -57,16 +58,16 @@ SELECT id, vorname FROM schueler
 ---
 
 
-## SELECT ... FROM - Alle Spalten ausgeben
+## Alle Spalten ausgeben
 
 ```
 SELECT * FROM tabellenname
 ```
 Mit diesem Befehl werden alle Zeilen aller Spalten der Tabelle angezeigt.
 
-### Beispiel:
+### Beispiel
 
-#### Befehl
+#### Befehl:
 ```
 SELECT * FROM schueler
 ```

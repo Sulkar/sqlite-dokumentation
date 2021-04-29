@@ -1,12 +1,20 @@
 site_name: SQLite Dokumentation
 extra_css: [extra.css]
 nav:
-    - 'index.md'
     - SELECT: 'select.md'
-    - WHERE: 'where.md'
-    - WHERE 2: 'where2.md'
+    - WHERE:
+        - WHERE 1: 'where.md'
+        - WHERE 2: 'where2.md'
     - JOIN: 'join.md'
     - AGGREGATE: 'aggregate.md'
+    - UPDATE: 'update.md'
+    - DELETE: 'delete.md'
+    - INSERT: 'insert.md'
+    - TABLE:
+        - CREATE: 'create.md'
+        - DROP: 'drop.md'
+        - ALTER: 'alter.md'
+   
 plugins:
     - search:
         lang: de

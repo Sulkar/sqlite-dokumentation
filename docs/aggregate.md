@@ -4,7 +4,7 @@
 
 
 | Aggregatsfunktion | Beschreibung |
-| -------- | -------- | -------- |
+| -------- | -------- |
 | COUNT(spaltenname)     | Zählt alle Einträge die in der gewählten Spalte einen Wert haben.     | 
 | AVG(spaltenname)     | Berechnet den Durchschnitt aller gefundenen Werte.     | Text     |
 | SUM(spaltenname)     | Summiert alle gefundenen Werte.     | 
@@ -23,8 +23,8 @@ Mit diesem Befehl werden Informationen aus mehreren Tabellen gleichzeitig abgefr
 
 ### Beispiele:
 
-
 **Tabelle 1: schueler**
+
 |id| vorname   | nachname | geburtsdatum | klasse_id | 
 |--|--------   | -------- | ------------ | :-------: |
 |1 | Paul      | Weber    | 2009-07-12   |     1     |
@@ -58,7 +58,9 @@ Mit diesem Befehl wird der älteste Schüler*in gefunden, da nach dem kleinsten 
 | MIN(geburtsdatum)|vorname|
 |--------   | - |
 | 2007-05-19 | Sabrina |
+
 #### Befehl
+
 ```
 SELECT COUNT(id) FROM schueler
 ```
@@ -72,7 +74,9 @@ Mit diesem Befehl werden die Einträge in der Spalte id gezählt und ausgegeben.
 
 
 ---
+
 #### Befehl
+
 ```
 SELECT COUNT(id), klasse_id FROM schueler GROUP BY klasse_id
 ```
@@ -98,6 +102,7 @@ Der Befehl HAVING ersetzt bei einer Aggregatsfunktion den Befehl WHERE und über
 
 
 #### Befehl
+
 ```
 SELECT COUNT(id), klasse_id FROM schueler 
 GROUP BY klasse_id 
@@ -111,6 +116,3 @@ Mit diesem Befehl werden die Einträge nach der Spalte klasse_id gruppiert, die 
 |--------   | -|
 | 3      | 2 |
 
-
-
----

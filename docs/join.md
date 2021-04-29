@@ -1,6 +1,6 @@
 # JOIN
 
-## JOIN - Ergebnisse aus mehreren Tabellen
+## Ergebnisse aus mehreren Tabellen
 
 ```
 SELECT tabellenname_1.spaltenname_1, tabellenname_2.spaltenname_1 FROM tabellename_1

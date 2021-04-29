@@ -1,17 +1,13 @@
 # Index
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Diese Dokumentation dient zum Nachschlagen und Lernen von SQLite Befehlen für Schülerinnen und Schüler. 
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project. dsfdsdf
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Die hier aufgeführten SQLite Befehle können mit Hilfe des online SQLite Editors <a href="https://sulkar.github.io/SQLverine/" target="_blank">SQLverine</a> einfach umgesetzt werden.
+<center><a href="https://sulkar.github.io/SQLverine/" target="_blank"><img src="images/sqlVerine-logo.png" width="300px"></a></center>
 
-## Project layout
+## Überblick
+<center><img src="images/bildSql.png" width="300px"></center>
+...
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+

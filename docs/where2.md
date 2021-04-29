@@ -88,5 +88,3 @@ SELECT * FROM schueler LIMIT 2 OFFSET 2
 |4 | Sabrina   |  Otto    | 2007-05-19   |     2     |
 
 
-
----
