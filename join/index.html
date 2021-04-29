@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>JOIN - SQLite Dokumentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">SQLite Dokumentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../select/" class="nav-link">SELECT</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">WHERE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../where/" class="dropdown-item">WHERE 1</a>
+</li>
+                                    
+<li>
+    <a href="../where2/" class="dropdown-item">WHERE 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">JOIN</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../aggregate/" class="nav-link">AGGREGATE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../update/" class="nav-link">UPDATE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../delete/" class="nav-link">DELETE</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../insert/" class="nav-link">INSERT</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">TABLE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../create/" class="dropdown-item">CREATE</a>
+</li>
+                                    
+<li>
+    <a href="../drop/" class="dropdown-item">DROP</a>
+</li>
+                                    
+<li>
+    <a href="../alter/" class="dropdown-item">ALTER</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../where2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../aggregate/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#join" class="nav-link">JOIN</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ergebnisse-aus-mehreren-tabellen" class="nav-link">Ergebnisse aus mehreren Tabellen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="join">JOIN</h1>
+<h2 id="ergebnisse-aus-mehreren-tabellen">Ergebnisse aus mehreren Tabellen</h2>
+<pre><code>SELECT tabellenname_1.spaltenname_1, tabellenname_2.spaltenname_1 FROM tabellename_1
+JOIN tabellenname_2 ON tabellenname_2.id = tabellenname_1.tabellenname_2_id
+</code></pre>
+<p>oder</p>
+<pre><code>SELECT tabellenname_1.*, tabellenname_2.* FROM tabellename_1
+JOIN tabellenname_2 ON tabellenname_2.id = tabellenname_1.tabellenname_2_id
+</code></pre>
+<p>Mit diesem Befehl werden Informationen aus mehreren Tabellen gleichzeitig abgefragt. Das Ergebnis wird über die jeweiligen IDs verknüpft.</p>
+<h3 id="beispiel-1">Beispiel 1:</h3>
+<p><strong>Tabelle 1: schueler</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Paul</td>
+<td>Weber</td>
+<td>2009-07-12</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Margot</td>
+<td>Müller</td>
+<td>2008-11-19</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>2008-06-30</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sabrina</td>
+<td>Otto</td>
+<td>2007-05-19</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ayse</td>
+<td>Ünül</td>
+<td>2008-12-12</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabelle 2: klassen</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th align="center">jahrgangsstufe</th>
+<th align="center">lehrer_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1 A</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2 A</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3 A</td>
+<td align="center">3</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4 A GtK</td>
+<td align="center">4</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4B</td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="befehl">Befehl</h4>
+<pre><code>SELECT schueler.vorname, schueler.nachname, klassen.name FROM schueler
+JOIN klassen ON klasse.id = schueler.klassen_id
+</code></pre>
+<p>Mit diesem Befehl wird abgefragt, welcher Schüler*in in welcher Klasse ist.</p>
+<h4 id="ergebnis">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>schueler.vorname</th>
+<th>schueler.nachname</th>
+<th><span>klassen.name</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paul</td>
+<td>Weber</td>
+<td>1 A</td>
+</tr>
+<tr>
+<td>Margot</td>
+<td>Müller</td>
+<td>2 A</td>
+</tr>
+<tr>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>1 A</td>
+</tr>
+<tr>
+<td>Sabrina</td>
+<td>Otto</td>
+<td>2 A</td>
+</tr>
+<tr>
+<td>Ayse</td>
+<td>Ünül</td>
+<td>2 A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beispiel-2">Beispiel 2:</h3>
+<p><strong>Tabelle 1: schueler</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+<th>geburtsdatum</th>
+<th align="center">klasse_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Paul</td>
+<td>Weber</td>
+<td>2009-07-12</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Margot</td>
+<td>Müller</td>
+<td>2008-11-19</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>2008-06-30</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sabrina</td>
+<td>Otto</td>
+<td>2007-05-19</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ayse</td>
+<td>Ünül</td>
+<td>2008-12-12</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabelle 2: klassen</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th align="center">jahrgangsstufe</th>
+<th align="center">lehrer_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1 A</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2 A</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3 A</td>
+<td align="center">3</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4 A GtK</td>
+<td align="center">4</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4B</td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabelle 3: lehrer</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>vorname</th>
+<th>nachname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Peter</td>
+<td>Müller</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wolfgang</td>
+<td>Schmidt</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Michael</td>
+<td>Schneider</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Maria</td>
+<td>Fischer</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Werner</td>
+<td>Geuder</td>
+</tr>
+</tbody>
+</table>
+<h4 id="befehl_1">Befehl</h4>
+<pre><code>SELECT schueler.vorname, schueler.nachname, lehrer.vorname, lehrer.nachname FROM schueler
+JOIN klassen ON klasse.id = schueler.klassen_id
+JOIN lehrer ON lehrer.id = klassen.lehrer_id
+</code></pre>
+<p>Mit diesem Befehl wird abgefragt, welcher Schüler*in welche Klassenlehrkraft hat. Die drei Tabellen (schueler, klassen, lehrer) werden mittels JOIN miteinander verbunden. Ausgegeben werden aber nur die Spalten (aus Tabelle schueler und Tabelle lehrer), die im SELECT-Befehl eingetragen wurden.</p>
+<h4 id="ergebnis_1">Ergebnis:</h4>
+<table>
+<thead>
+<tr>
+<th>schueler.vorname</th>
+<th>schueler.nachname</th>
+<th>lehrer.vorname</th>
+<th align="center">lehrer.nachname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paul</td>
+<td>Weber</td>
+<td>Michael</td>
+<td align="center">Schneider</td>
+</tr>
+<tr>
+<td>Margot</td>
+<td>Müller</td>
+<td>Wolfgang</td>
+<td align="center">Schmidt</td>
+</tr>
+<tr>
+<td>Mahmud</td>
+<td>Al'hissi</td>
+<td>Michael</td>
+<td align="center">Schneider</td>
+</tr>
+<tr>
+<td>Sabrina</td>
+<td>Otto</td>
+<td>Wolfgang</td>
+<td align="center">Schmidt</td>
+</tr>
+<tr>
+<td>Ayse</td>
+<td>Ünül</td>
+<td>Wolfgang</td>
+<td align="center">Schmidt</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
