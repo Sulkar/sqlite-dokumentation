@@ -1,7 +1,7 @@
 # :open_book: sqlite-dokumentation
 
 ## Demo
-:open_book: [SQLite Dokumentation](https://sulkar.github.io/sqlite-dokumentation/)
+[SQLite Dokumentation](https://sulkar.github.io/sqlite-dokumentation/)
 
 ## MkDocs Commands
 - mkdocs serve
