@@ -1,4 +1,4 @@
-# WHERE 1
+# WHERE
 
 ## Vergleichsoperatoren
 

@@ -223,6 +223,7 @@ GROUP BY spaltenname
 </tbody>
 </table>
 <h4 id="befehl">Befehl</h4>
+<p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
 <pre><code>SELECT MAX(geburtsdatum), vorname FROM schueler
 </code></pre>
 <p>Mit diesem Befehl wird der jüngste Schüler*in gefunden, da nach dem größten Wert gesucht wird.</p>
@@ -243,6 +244,7 @@ GROUP BY spaltenname
 </table>
 <hr />
 <h4 id="befehl_1">Befehl</h4>
+<p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
 <pre><code>SELECT MIN(geburtsdatum), vorname FROM schueler
 </code></pre>
 <p>Mit diesem Befehl wird der älteste Schüler*in gefunden, da nach dem kleinsten Wert gesucht wird.</p>
@@ -262,6 +264,7 @@ GROUP BY spaltenname
 </tbody>
 </table>
 <h4 id="befehl_2">Befehl</h4>
+<p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
 <pre><code>SELECT COUNT(id) FROM schueler
 </code></pre>
 <p>Mit diesem Befehl werden die Einträge in der Spalte id gezählt und ausgegeben.</p>
@@ -280,6 +283,7 @@ GROUP BY spaltenname
 </table>
 <hr />
 <h4 id="befehl_3">Befehl</h4>
+<p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
 <pre><code>SELECT COUNT(id), klasse_id FROM schueler GROUP BY klasse_id
 </code></pre>
 <p>Mit diesem Befehl werden die Einträge nach der Spalte klasse_id gruppiert, dann gezählt und ausgegeben.</p>
@@ -310,6 +314,7 @@ HAVING Aggregatsfunktion(spaltenname) &lt;Operator&gt; &lt;Wert&gt;
 </code></pre>
 <p>Der Befehl HAVING ersetzt bei einer Aggregatsfunktion den Befehl WHERE und überprüft, ob eine Bedingung zutrifft.</p>
 <h4 id="befehl_4">Befehl</h4>
+<p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
 <pre><code>SELECT COUNT(id), klasse_id FROM schueler 
 GROUP BY klasse_id 
 HAVING COUNT(id) &gt; 2

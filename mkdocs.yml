@@ -1,10 +1,20 @@
 site_name: SQLite Dokumentation
+theme:
+    name: mkdocs
+    custom_dir: custom_theme/
+    language: de
+    highlightjs: true
+    hljs_languages:
+        - sql
 extra_css: [extra.css]
+plugins:
+    - search:
+        min_search_length: 2
 nav:
     - SELECT: 'select.md'
-    - WHERE:
-        - WHERE 1: 'where.md'
-        - WHERE 2: 'where2.md'
+    - WHERE: 'where.md'
+    - ORDER: 'order.md'
+    - LIMIT: 'limit.md'
     - JOIN: 'join.md'
     - AGGREGATE: 'aggregate.md'
     - UPDATE: 'update.md'
@@ -15,7 +25,5 @@ nav:
         - DROP: 'drop.md'
         - ALTER: 'alter.md'
    
-plugins:
-    - search:
-        lang: de
+
         
