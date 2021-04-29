@@ -12,7 +12,7 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/vs.min.css">
         <link href="../extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
@@ -142,13 +142,13 @@
 <h1 id="select">SELECT</h1>
 <p><center><img src="../images/Select.png" width="200px"></center></p>
 <h2 id="einzelne-spalte-ausgeben">Einzelne Spalte ausgeben</h2>
-<pre><code>SELECT spaltenname FROM tabellenname
+<pre><code class="language-sql">SELECT spaltenname FROM tabellenname
 </code></pre>
 <p>Mit diesem Befehl werden alle Zeilen der Spalte "spaltenname" aus der Tabelle "tabellenname" ausgegeben.</p>
 <h3 id="beispiel">Beispiel</h3>
 <h4 id="befehl">Befehl:</h4>
 <p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
-<pre><code>SELECT vorname FROM schueler
+<pre><code class="language-sql">SELECT vorname FROM schueler
 </code></pre>
 <h4 id="ergebnis">Ergebnis:</h4>
 <table>
@@ -177,13 +177,13 @@
 </table>
 <hr />
 <h2 id="gezielt-mehrere-spalten-ausgeben">Gezielt mehrere Spalten ausgeben</h2>
-<pre><code>SELECT spaltenname_1, spaltenname_2,...,spaltenname_n FROM tabellenname
+<pre><code class="language-sql">SELECT spaltenname_1, spaltenname_2,...,spaltenname_n FROM tabellenname
 </code></pre>
 <p>Hiermit können mehrere Spalten einer Tabelle angezeigt werden. Es werden immer alle Zeilen der selektierten Spalten angezeigt.</p>
 <h3 id="beispiel_1">Beispiel</h3>
 <h4 id="befehl_1">Befehl:</h4>
 <p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
-<pre><code>SELECT id, vorname FROM schueler
+<pre><code class="language-sql">SELECT id, vorname FROM schueler
 </code></pre>
 <h4 id="ergebnis_1">Ergebnis:</h4>
 <table>
@@ -218,13 +218,13 @@
 </table>
 <hr />
 <h2 id="alle-spalten-ausgeben">Alle Spalten ausgeben</h2>
-<pre><code>SELECT * FROM tabellenname
+<pre><code class="language-sql">SELECT * FROM tabellenname
 </code></pre>
 <p>Mit diesem Befehl werden alle Zeilen aller Spalten der Tabelle angezeigt.</p>
 <h3 id="beispiel_2">Beispiel</h3>
 <h4 id="befehl_2">Befehl:</h4>
 <p><a class="runSqlVerine" href="https://sulkar.github.io/SQLverine/" target="_blank"><i class="fa fa-2x fa-arrow-right" ></i></a></p>
-<pre><code>SELECT * FROM schueler
+<pre><code class="language-sql">SELECT * FROM schueler
 </code></pre>
 <h4 id="ergebnis_2">Ergebnis:</h4>
 <table>
