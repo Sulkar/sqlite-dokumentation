@@ -1,6 +1,6 @@
 # WHERE
 
-<center><img src="/images/Vergleichsoperatoren.png" width="200px"></center>
+<center><img src="../images/Vergleichsoperatoren.png" width="200px"></center>
 
 ## Vergleichsoperatoren
 

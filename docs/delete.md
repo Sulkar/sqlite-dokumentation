@@ -1,6 +1,6 @@
 # DELETE
 
-<center><img src="/images/Delete.png" width="200px"></center>
+<center><img src="../images/Drop.png" width="200px"></center>
 
 ## alle Einträge einer Tabelle löschen
 ```
@@ -33,6 +33,8 @@ Mit diesem Befehl werden alle Schüler*innen der Schule gelöscht.
 
 |id| vorname   | nachname | geburtsdatum | klasse_id | fehltage |
 |--|--------   | -------- | ------------ | :-------: |:-:|
+
+<center><img src="../images/Delete.png" width="200px"></center>
 
 ## bestimmte Einträge einer Tabelle löschen
 ```

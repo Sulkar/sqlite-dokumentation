@@ -1,6 +1,6 @@
 # SELECT
 
-<center><img src="/images/Select.png" width="200px"></center>
+<center><img src="../images/Select.png" width="200px"></center>
 
 ## Einzelne Spalte ausgeben
 

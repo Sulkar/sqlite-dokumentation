@@ -1,6 +1,6 @@
 # ORDER
 
-<center><img src="/images/Sortieren.png" width="200px"></center>
+<center><img src="../images/Sortieren.png" width="200px"></center>
 
 ## Ausgabe sortieren
 ```

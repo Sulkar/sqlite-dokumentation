@@ -1,6 +1,6 @@
 # TABLE: ALTER
 
-<center><img src="/images/neueSpalte.png" width="200px"></center>
+<center><img src="../images/neueSpalte.png" width="200px"></center>
 
 ## Spalte einer Tabelle hinzufügen
 
@@ -31,6 +31,8 @@ ALTER TABLE schueler ADD geburtsort TEXT
 
 
 ---
+
+<center><img src="../images/Delete.png" width="200px"></center>
 
 ## Spalte einer Tabelle löschen
 
