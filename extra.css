@@ -1,3 +1,16 @@
 pre code {
     font-size: 1.2em;
 }
+.runSqlVerine{
+    color: #198754;
+    position: absolute;
+    right: 20px;
+    margin-top: 13px;
+}
+
+.runSqlVerineM1{
+    color: #198754;
+    position: absolute;
+    right: 20px;
+    margin-top: 6px;
+}
